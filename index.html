@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+   <div class="content">
+     <div class="pull-left">
+      <a href="index.html">
+        <img class="anh1" src="logoDuAn.png" >
+      </a>
+
+     </div>
+     <div class="pull-right">
+      <a href="http://vlhn-hcmus.com/"target="_blank" >
+        <img class="anh2" src="logo_bm_vi.png" width="80px" height="70px" >
+        
+      </a>
+      <a href="https://www.hcmus.edu.vn/" target="_blank">
+        <img class="anh3" src="logoTruong.png" width="80px" height="70px">
+      
+      </a>
+
+     </div  class="tieude">
+      <h1 class="td1">DỰ ÁN QUAN TRẮC MÔI TRƯỜNG THEO THỜI GIAN THỰC</h1>
+      <h2 class="td2">Bộ môn Vật lý Hạt nhân, Trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM</h2>
+    </div> 
+    <div id="time"class= "csT1"></div>
+    <div id="date"class= "date1"></div>
+    <div class="container">
+        <div class="p1">
+            <h2 class="td3">Suất liều tại quan trắc (uSv/h)</h2>
+           <div id="dose" class="csD"></div>
+        </div>
+        <div class="p2">
+            <h2 class="war">Đèn cảnh báo mức độ nguy hiểm</h2>
+            <div id="light1" ><img class ="img1" src="trang.png" ></div>
+            <div id="light2" ><img class ="img2" src="trang.png"  ></div>
+            <div id="light3" ><img class ="img3" src="trang.png" ></div>
+        </div>
+       
+    </div>
+    <div class="container1">
+        <div>
+
+                <h2 class="td4">Độ ẩm tại quan trắc (%)</h2>
+              <div id="Hu"class="csH" ></div>
+        </div>
+        <div>
+            <h2 class="td5">Nhiệt độ tại trạm quan trắc (°C)</h2>
+            <div id="Te"class="csT"></div>
+        </div>
+        <div class="ghichu">
+          "GHI CHÚ": Hệ thống được sử dụng để quan trắc môi trường theo thời gian online trực tuyến. Mục đích để cảnh báo mức độ nguy hiểm của phóng xạ thông qua website."</h2> 
+          </div>
+    </div>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+<script>
+  var today = new Date();
+  var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+
+  document.getElementById("time").innerHTML = time;
+  document.getElementById("date").innerHTML = date;
+</script>
+<script>
+    let dose;
+//let time;
+let Hu;
+let Te;
+let ledFibase;
+let fanFibase;
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    // apiKey: "AIzaSyCWp4Kjgfz5j_7Vua40xwt3hR13G9R8Vfo",
+    // authDomain: "bachchau-2406.firebaseapp.com",
+    // databaseURL: "https://bachchau-2406.firebaseio.com",
+    // projectId: "bachchau-2406",
+    // storageBucket: "bachchau-2406.appspot.com",
+    // messagingSenderId: "892444538838",
+    // appId: "1:892444538838:web:9bfd3563cca48547641677",
+    // measurementId: "G-TVPSH2HPL4"
+
+    apiKey: "AIzaSyAp7NkbHgAteMevnnvMrOi2tswyU9Jl7ts",
+    authDomain: "bachchau-2305.firebaseapp.com",
+    databaseURL: "https://bachchau-2305.firebaseio.com",
+    projectId: "bachchau-2305",
+    storageBucket: "bachchau-2305.appspot.com",
+    messagingSenderId: "98563805269",
+    appId: "1:98563805269:web:44a8cc8bcaaa77495344dc",
+    measurementId: "G-E1KKM2XNTB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var fireBaseRef = new Firebase("https://bachchau-2406.firebaseio.com");
+  
+  const database = firebase.database();
+  
+//   const userId = firebase.auth().currentUser.uid;
+getData();
+    async function getData(){
+      
+      const rs =await firebase.database().ref().once('value').then((snaps) => {
+         dose= snaps.val().dose;
+         document.getElementById('dose').innerHTML=dose;
+        //   time= snaps.val().Time;
+        //  document.getElementById('time').innerHTML=time;
+         Hu= snaps.val().Humidity;
+         document.getElementById('Hu').innerHTML=Hu+"%";
+         Te= snaps.val().Temperature;
+         document.getElementById('Te').innerHTML=Te+"°C";
+         fanFibase = snaps.val().FAN_STATUS;
+         
+        //  if(Hu>90){
+        //     document.getElementById("Hu").style.color = "red";
+        //     document.getElementById("Hu").innerHTML = Hu  ;
+
+        //  }
+        //  if(Te>38){
+        //     document.getElementById("Te").style.color = "red";
+        //     document.getElementById("Te").innerHTML = Te ;
+        //  }
+         if(dose>2){
+            document.getElementById("dose").style.color = "#e52e00";
+            document.getElementById("dose").innerHTML = dose ;
+            document.getElementById("light3").innerHTML="<img src='do.png' style='width:150px;height:150px;'>";
+            document.getElementById("light2").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+            document.getElementById("light1").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+         }
+         if(dose==2){
+            document.getElementById("dose").style.color = "red";
+            document.getElementById("dose").innerHTML = dose ;
+            document.getElementById("light3").innerHTML="<img src='do.png' style='width:150px;height:150px;'>";
+            document.getElementById("light2").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+            document.getElementById("light1").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+         }
+         if(dose>0.6) {
+           if(dose<2){
+            document.getElementById("dose").style.color = "yellow";
+            document.getElementById("dose").innerHTML = dose +"uSv/h" ;
+
+           
+             document.getElementById("light2").innerHTML="<img src='vang.png' style='width:150px;height:150px;'>";
+             document.getElementById("light3").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+            document.getElementById("light1").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+          }
+         }
+          if(dose < 0.6  ){
+            document.getElementById("dose").style.color = "goldenrod";
+            document.getElementById("dose").innerHTML = dose + "uSv/h";
+             document.getElementById("light1").innerHTML="<img src='xanh.png' style='width:150px;height:150px;'>";
+             document.getElementById("light2").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+            document.getElementById("light3").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+          }
+          if(dose == 0.6  ){
+            document.getElementById("dose").style.color = "green";
+            document.getElementById("dose").innerHTML = dose + "uSv/h";
+             document.getElementById("light1").innerHTML="<img src='xanh.png' style='width:150px;height:150px;'>";
+             document.getElementById("light2").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+            document.getElementById("light3").innerHTML="<img src='trang.png' style='width:150px;height:150px;'>";
+          }
+
+
+         
+        
+         
+    })
+    }
+    var myVar = setInterval(setColor, 300);
+ 
+ function setColor() {getData()
+  var today = new Date();
+  var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  document.getElementById("time").innerHTML = time;
+  document.getElementById("date").innerHTML = date;
+ }
+ 
+</script>

@@ -1,0 +1,1064 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+.content{
+    color:whitesmoke;
+    font-size:20px;
+    justify-content: center;
+    text-align: center;
+    width: 100% ;
+    height: 100px;
+    /* background-color: #0a105b; */
+}
+.pull-left{
+    float: left!important;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.pull-right{
+    float: right!important;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.tieude{
+    margin: 0;
+    padding: 0;
+}
+.td1{
+    font-size: 22px;
+    color: #e52e00;
+    font-weight: bold;
+    margin: 0 0 8px 0;  
+    font-family: inherit;
+    font-size: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.td2{
+    color: #0a105b;
+    font-size: 25   px;
+    margin: 0;
+    font-family: inherit;
+    font-weight: bold;
+
+}
+.td3{
+    color:blue;
+}
+.td4{
+    color:blue;
+}
+.td5{
+    color:blue;
+}
+.container{
+    justify-content: center;
+    text-align: center;
+    color: black;
+    width: auto;
+    height: 70px;
+    background-color:  whitesmoke;
+    grid-area: container;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: "p1 p2  ";
+
+    align-items: center;
+    
+ 
+
+}
+
+.war{
+    grid-area: war;
+    margin: 200px 0;
+    height: 160px;
+    color:blue ;
+    
+
+}
+.p1 {
+    height: 200px;
+}
+.img1{
+    grid-area: img1;
+    width: 150px;
+    height: 150px;
+  
+}
+.img2{
+    grid-area: img2;
+ padding: 0 20px 0 20px;
+ width: 150px;
+    height: 150px;
+ 
+ 
+}
+.img3{
+    grid-area: img3;
+    width: 150px;
+    height: 150px;
+   
+}
+
+.container .p2{
+    grid-area: p2;
+    display: grid;
+    grid-template-rows: 100%;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-areas: 'war war war'
+                        'img1 img2 img3';
+    height: 50px;
+    margin-right: 5px;
+   
+    align-items: center;
+    justify-content: center;
+
+
+}
+.container1{
+    justify-content: center;
+    text-align: center;
+    color: black;
+    width: auto;
+    height: 130px;
+    background-color:  whitesmoke;
+    grid-area: container;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-areas: " csH csT ghichu ";
+    
+    align-items: center;
+    margin:90px 0;
+    padding-top: 120px;
+}
+#dose{
+   
+}
+ .csD{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:goldenrod;
+    font-size: 35px;
+    margin: 30px 0 0 300px;
+    font-weight: bold;
+     background:seagreen;
+  border-radius: 50%;
+   height: 180px;
+   width: 180px;
+   line-height: 180px;
+   /* border-style: solid;
+   border-color: black; */
+   border: 5px solid black;
+   
+}
+#Hu{
+   
+}
+.csH{
+    color:goldenrod ;
+    font-size: 35px;
+    margin: 80px 0;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    background: seagreen; 
+    height: 180px;
+    width: 180px;
+    margin: 50px 0 0 80px;
+    line-height: 180px;
+    border: 5px solid black;
+    
+}
+#Te{
+   
+}
+.csT{
+    color:goldenrod;
+    font-size:   40px;
+    margin: 80px 0;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    background: seagreen; 
+    height: 180px;
+    width: 180px;
+    margin: 50px 0 0 100px;
+    line-height: 180px;
+    border: 5px solid black;
+
+}
+}
+#time{
+   
+}
+.csT1{
+    height: 50px;
+    width:100%px;
+    background: whitesmoke;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding:0 0 0 0;
+    font-size:  30px;
+    font-weight: bold;
+    color: orangered;
+    line-height: 120px;
+
+
+
+}
+#date{
+   
+}
+.date1{
+    height: 50px;
+    width:100%px;
+    background: whitesmoke;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size:  30px;
+    font-weight: bold;
+    color: orangered;
+    line-height: 100px;
+
+
+
+}
+.ghichu{
+    align-content: center;
+    text-align: center;
+    font-size: 23px;
+}
+@media only screen and (max-width: 1100px){
+    .td1 {
+        font-size: 20px;
+
+    }
+    .td2 {
+        font-size: 23px;
+
+    }
+    .td3{
+        font-size:10px ;
+        color:blue;
+
+    }
+    .td4{
+        color:blue;
+        font-size:20px ;
+    }
+    .td5{
+        color:blue;
+        font-size:20px ;
+        width: 300px;
+    }
+    .war{
+        grid-area: war;
+        margin: 200px 0;
+        height: 160px;
+        color:blue ;
+        font-size: 20px;
+    }
+    #dose{
+   
+    }
+     .csD{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color:goldenrod;
+        font-size: 35px;
+        margin: 30px 0 0 165px;
+        font-weight: bold;
+         background:seagreen;
+      border-radius: 50%;
+       height: 160px;
+       width: 160px;
+       line-height: 180px;
+       /* border-style: solid;
+       border-color: black; */
+       border: 5px solid black;
+     }
+     #time{
+   
+    }
+    .csT1{
+       
+        font-size:  25px;
+        
+    
+    }
+    #date{
+   
+    }
+    .date1{
+        font-size:  25px;
+    }
+   
+        
+    
+    .ghichu{
+        align-content: center;
+    text-align: center;
+    font-size: 20px;
+    }
+    #Hu{
+   
+    }
+    .csH{
+        color:goldenrod ;
+        font-size: 35px;
+        margin: 80px 0;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: seagreen; 
+        height: 160px;
+        width: 160px;
+        margin: 50px 0 0 50px;
+        line-height: 180px;
+        border: 5px solid black;
+        
+    }
+    #Te{
+       
+    }
+    .csT{
+        color:goldenrod;
+        font-size:   40px;
+        margin: 80px 0;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: seagreen; 
+        height: 160px;
+        width: 160px;
+        margin: 50px 0 0 50px;
+        line-height: 180px;
+        border: 5px solid black;
+    
+    }
+}
+@media only screen and (max-width: 900px){
+    .td1 {
+        font-size: 18px;
+
+    }
+    .td2 {
+        font-size: 20px;
+
+    }
+    .td3{
+        font-size:18px ;
+        color:blue;
+        padding-top: 5px;
+        padding-left: 20px;
+
+    }
+    .td4{
+        color:blue;
+        font-size:18px ;
+    }
+    .td5{
+        color:blue;
+        font-size:18px ;
+        width: 250px;
+        margin-right: 0px;
+        
+    }
+    .war{
+        grid-area: war;
+        margin: 200px 0;
+        height: 160px;
+        color:blue ;
+        font-size: 18px;
+    }
+    .ghichu{
+        align-content: center;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 50px;
+    margin-right: 20px;
+    }
+    #time{
+   
+    }
+    .csT1{
+       
+        font-size:  20px;
+        
+    
+    }
+    #date{
+   
+    }
+    .date1{
+        font-size:  20px;
+    }
+    #Hu{
+   
+    }
+    .csH{
+        color:goldenrod ;
+        font-size: 25px;
+        margin: 80px 0;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: seagreen; 
+        height: 130px;
+        width: 130px;
+        margin: 50px 0 0 50px;
+        line-height: 130px;
+        border: 5px solid black;
+        
+    }
+    #Te{
+       
+    }
+    .csT{
+        color:goldenrod;
+        font-size:   25px;
+        margin: 80px 0;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: seagreen; 
+        height: 130px;
+        width: 130px;
+        margin: 50px 0 0 50px;
+        line-height: 130px;
+        border: 5px solid black;
+    
+    }
+    #dose{
+   
+    }
+     .csD{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color:goldenrod;
+        font-size: 25px;
+        margin: 70px 0 0 160px;
+        font-weight: bold;
+         background:seagreen;
+      border-radius: 50%;
+       height: 130px;
+       width: 130px;
+       line-height: 130px;
+       /* border-style: solid;
+       border-color: black; */
+       border: 5px solid black;
+     }
+  
+    .img1{
+        grid-area: img1;
+        width: 130px;
+
+        height: 130px;
+      
+    }
+    .img2{
+        grid-area: img2;
+     padding: 0 20px 0 20px;
+     width: 130px;
+
+     height: 130px;
+    }
+    .img3{
+        grid-area: img3;
+        width: 130px;
+
+        height: 130px;
+       
+    }
+    .anh1{
+        width: 90px;
+        height: 60px;
+    }
+    .anh2{
+        width: 60px;
+        height: 50px;
+    }
+    .anh3{
+        width: 60px;
+        height: 50px;
+    }
+
+}
+@media only screen and (max-width: 414px){
+    .td1 {
+        font-size: 12px;
+       
+        text-align: center;
+        align-content: center;
+       
+        
+
+    }
+    .td2 {
+        font-size: 12px;
+        text-align: center;
+        align-content: center;
+        width: 414px;
+        
+        
+       
+       
+
+
+    }
+   
+    
+    .td3{
+        font-size:12px ;
+        color:blue;
+       
+       height: 30px;
+       margin-right: 20px;
+       text-align: center;
+       align-content: center;
+       margin-bottom: 50px;
+       
+        
+
+    }
+    .td4{
+        color:blue;
+        font-size:12px ;
+        width: 150px;
+        margin-left: 0;
+    }
+    .td5{
+        color:blue;
+        font-size:12px ;
+        width: 150px;
+        margin-left: 120px;
+    }
+    .war{
+        grid-area: war;
+        font-size: 12px;
+        margin: 100px 0;
+        height: 50px;
+       
+     
+    }
+    .ghichu{
+        grid-area: ghichu;
+        height: 40px;
+        width: 380px;
+        align-content: center;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 50px;
+    margin-left: 20px;
+    }
+    #time{
+   
+    }
+    .csT1{
+       
+        font-size:  12px;
+    
+        padding-bottom: 0;
+      height: 30px;
+    /* align-items: center;
+    text-align: center;
+    align-content: center; */
+    line-height: 50px;
+    
+    }
+    #date{
+   
+    }
+    .date1{
+        font-size:  12px;
+        padding-bottom: 120px;
+        height: 5px;
+    line-height: 30px;
+       
+    }
+    #Hu{
+   
+    }
+    .csH{
+        grid-area: csH;
+        color:goldenrod ;
+        font-size: 15px;
+        margin: 80px 0;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: seagreen; 
+        height: 70px;
+        width: 70px;
+        margin: 50px 0 0 30px;
+        line-height: 70px;
+        border: 5px solid black;
+        
+    }
+    #Te{
+       
+    }
+    .csT{
+    
+        grid-area: csT;
+        color:goldenrod;
+        font-size:   15px;
+        margin: 80px 0;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: seagreen; 
+        height: 70px;
+        width: 70px;
+        margin: 35px 0 0 200px;
+        line-height: 70px;
+        border: 5px solid black;
+    
+    }
+    #dose{
+   
+    }
+     .csD{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color:goldenrod;
+        font-size: 15px;
+       
+        font-weight: bold;
+         background:seagreen;
+      border-radius: 50%;
+       height: 70px;
+       width: 70px;
+       line-height: 70px;
+       /* border-style: solid;
+       border-color: black; */
+       border: 5px solid black;
+       margin-right: 150px;
+       margin-bottom: 200px;
+     }
+  
+    .img1{
+        grid-area: img1;
+        width: 70px;
+
+        height: 70px;
+      
+    }
+    .img2{
+        grid-area: img2;
+     padding: 0 20px 0 20px;
+     width: 70px;
+
+     height: 70px;
+    }
+    .img3{
+        grid-area: img3;
+        width: 70px;
+
+        height: 70px;
+       
+    }
+    .anh1{
+        width: 35px;
+        height: 20px;
+    }
+    .anh2{
+        width: 30px;
+        height: 20px;
+     
+      
+    }
+    .anh3{
+        width: 30px;
+        height: 20px;
+        
+    }
+    .pull-right{
+        float: right!important;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        /* padding-right: 5px; */
+    }
+    .content{
+        color:whitesmoke;
+        font-size:20px;
+        justify-content: center;
+        text-align: center;
+        width: 414px ;
+        height: 60px;
+        /* background-color: #0a105b; */
+    }
+   
+    .container{
+        justify-content: center;
+        text-align: center;
+        color: black;
+        width: auto;
+        height: 100px;
+        background-color:  whitesmoke;
+        grid-area: container;
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 1fr ;
+        grid-template-areas: "p1"
+                             "p2";
+    
+        align-items: center;
+        
+     
+    
+    }
+    .container .p1{
+        height:110px;       
+        padding: 0 0 300px 0;
+        margin-top: 100px;
+        justify-content: center;
+        text-align: center;
+        
+
+      
+    }
+    .container .p2{
+        height:40px;       
+       
+        justify-content: center;
+        text-align: center;
+        
+
+      
+    }
+    
+    
+    .container1{
+        justify-content: center;
+        text-align: center;
+        color: black;
+        width: 414px;
+        height: 100px;
+        background-color:  whitesmoke;
+        grid-area: container1;
+        display: grid;
+        grid-template-rows: 100%;
+        /* grid-template-columns: 25% 25% 50%; */
+        grid-template-areas: 'csH csT' 
+                            'ghichu ghichu';
+        
+        align-items: center;
+        margin:90px 0;
+        padding-top: 50px;
+    }.body{
+        width: 414px;;
+        margin:0;
+        padding: 0;
+        background-color: whitesmoke;
+    }
+   
+    
+  
+}
+@media only screen and (max-width: 360px){
+    .td1 {
+        font-size: 12px;
+       
+        text-align: center;
+        align-content: center;
+       
+        
+
+    }
+    .td2 {
+        font-size: 12px;
+        text-align: center;
+        align-content: center;
+        width: 360px;
+        
+        
+       
+       
+
+
+    }
+   
+    
+    .td3{
+        font-size:12px ;
+        color:blue;
+       
+       height: 20px;
+       margin-right: 20px;
+       text-align: center;
+       align-content: center;
+       margin-bottom: 50px;
+       
+        
+
+    }
+    .td4{
+        color:blue;
+        font-size:12px ;
+        width: 150px;
+        margin-left: 0;
+    }
+    .td5{
+        color:blue;
+        font-size:12px ;
+        width: 170px;
+        margin-left: 95px;
+    }
+    .war{
+        grid-area: war;
+        font-size: 12px;
+        margin: 100px 0;
+        height: 50px;
+       
+     
+    }
+    .ghichu{
+        grid-area: ghichu;
+        height: 30px;
+        width: 350px;
+        /* align-content: center;
+    text-align: center; */
+    font-size: 13px;
+    margin-top: 50px;
+    margin-left: 10px;
+    }
+    #time{
+   
+    }
+    .csT1{
+       
+        font-size:  12px;
+    
+        padding-bottom: 0;
+      height: 30px;
+    /* align-items: center;
+    text-align: center;
+    align-content: center; */
+    line-height: 50px;
+    
+    }
+    #date{
+   
+    }
+    .date1{
+        font-size:  12px;
+        padding-bottom: 140px;
+        height: 5px;
+    line-height: 30px;
+       
+    }
+    #Hu{
+   
+    }
+    .csH{
+        grid-area: csH;
+        color:goldenrod ;
+        font-size: 15px;
+        margin: 80px 0;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: seagreen; 
+        height: 80px;
+        width:80px;
+        margin: 30px 0 0 30px;
+        line-height: 80px;
+        border: 5px solid black;
+        
+    }
+    #Te{
+       
+    }
+    .csT{
+    
+        grid-area: csT;
+        color:goldenrod;
+        font-size:   15px;
+        margin: 80px 0;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: seagreen; 
+        height: 80px;
+        width: 80px;
+        margin: 30px 0 0 160px;
+        line-height: 80px;
+        border: 5px solid black;
+    
+    }
+    #dose{
+   
+    }
+     .csD{
+        /* justify-content: center;
+        align-items: center;
+        text-align: center; */
+        color:goldenrod;
+        font-size: 15px;
+       
+        font-weight: bold;
+         background:seagreen;
+      border-radius: 50%;
+       height: 80px;
+       width: 80px;
+       line-height: 80px;
+       /* border-style: solid;
+       border-color: black; */
+       border: 5px solid black;
+       margin-left:140px;
+       /* margin-bottom: 200px; */
+     }
+  
+    .img1{
+        grid-area: img1;
+        width: 70px;
+
+        height: 70px;
+      
+    }
+    .img2{
+        grid-area: img2;
+     padding: 0 20px 0 20px;
+     width: 70px;
+
+     height: 70px;
+    }
+    .img3{
+        grid-area: img3;
+        width: 70px;
+
+        height: 70px;
+       
+    }
+    .anh1{
+        width: 35px;
+        height: 20px;
+    }
+    .anh2{
+        width: 30px;
+        height: 20px;
+     
+      
+    }
+    .anh3{
+        width: 30px;
+        height: 20px;
+        
+    }
+    .pull-right{
+        float: right!important;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        /* padding-right: 5px; */
+    }
+    .content{
+        color:whitesmoke;
+        font-size:20px;
+        justify-content: center;
+        text-align: center;
+        width: 360px ;
+        height: 60px;
+        /* background-color: #0a105b; */
+    }
+   
+    .container{
+        justify-content: center;
+        text-align: center;
+        color: black;
+        width: auto;
+        height: 90px;
+        background-color:  whitesmoke;
+        grid-area: container;
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 1fr ;
+        grid-template-areas: "p1"
+                             "p2";
+    
+        align-items: center;
+        
+     
+    
+    }
+    .container .p1{
+        height:120px;       
+        padding: 0 0 300px 0;
+        margin-top: 100px;
+        justify-content: center;
+        text-align: center;
+        width: 360px;
+        
+
+      
+    }
+    .container .p2{
+        height:40px;       
+       
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+        
+
+      
+    }
+    
+    
+    .container1{
+        justify-content: center;
+        text-align: center;
+        color: black;
+        width: 360px;
+        height: 80px;
+        background-color: whitesmoke;
+        grid-area: container1;
+        display: grid;
+        grid-template-rows: 100%;
+        /* grid-template-columns: 25% 25% 50%; */
+        grid-template-areas: 'csH csT' 
+                            'ghichu ghichu';
+        
+        align-items: center;
+        margin:90px 0;
+        padding-top: 70px;
+    }
+    .tieude{
+        width: 360px;
+    }
+    
+  
+}
